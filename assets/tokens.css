@@ -1,0 +1,13 @@
+:root {
+  --bahareth-black: #101213;
+  --bahareth-charcoal: #1b1e1f;
+  --bahareth-graphite: #343839;
+  --bahareth-cyan: #00a6b7;
+  --bahareth-teal: #19b7a2;
+  --bahareth-lime: #65d45e;
+  --bahareth-paper: #f2f3f1;
+  --bahareth-muted: #a8b0b0;
+  --bahareth-gradient: linear-gradient(135deg, #00a6b7 0%, #19b7a2 50%, #65d45e 100%);
+  --bahareth-font: "IBM Plex Sans Arabic", sans-serif;
+  --bahareth-url: "MohammadBahareth.com";
+}
