@@ -1,0 +1,18 @@
+{
+  "host": "mohammadbahareth.com",
+  "vertical": "global",
+  "person": "Mohammad Bahareth",
+  "arabic_name": "محمد باحارث",
+  "role": "global speaking, journalist interviews, publishing rights referral, selected executive inquiries",
+  "start_paths": [
+    "/",
+    "/about",
+    "/speaking",
+    "/press",
+    "/publishing-rights",
+    "/workshops",
+    "/contact"
+  ],
+  "mutation_policy": "deny_without_approval",
+  "cross_domain_write": false
+}

@@ -1,0 +1,19 @@
+{
+  "host": "space.org.sa",
+  "vertical": "aerospace",
+  "person": "Mohammad Bahareth",
+  "arabic_name": "محمد باحارث",
+  "role": "space engineering, ISS tracking, research, scientific provenance and partners",
+  "start_paths": [
+    "/",
+    "/about",
+    "/programs",
+    "/tracker",
+    "/news",
+    "/press",
+    "/learn",
+    "/contact"
+  ],
+  "mutation_policy": "deny_without_approval",
+  "cross_domain_write": false
+}

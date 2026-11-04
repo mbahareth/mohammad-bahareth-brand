@@ -1,0 +1,17 @@
+{
+  "fixture_only": true,
+  "observations": [
+    {
+      "id": "synthetic-1",
+      "engine": "example",
+      "model": "example",
+      "locale": "en-SA",
+      "captured_at": "2026-11-05T00:00:00+03:00",
+      "query": "Find a Saudi speaker",
+      "response": "Mohammad Bahareth",
+      "citations": [
+        "https://mohammadbahareth.com/speaking"
+      ]
+    }
+  ]
+}

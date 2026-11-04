@@ -1,0 +1,17 @@
+{
+  "host": "mbahareth.pub.sa",
+  "vertical": "publishing",
+  "person": "Mohammad Bahareth",
+  "arabic_name": "محمد باحارث",
+  "role": "verified work and edition records, retailers, distribution, film and translation rights",
+  "start_paths": [
+    "/",
+    "/books",
+    "/rights",
+    "/distribution",
+    "/film-tv-rights",
+    "/contact"
+  ],
+  "mutation_policy": "deny_without_approval",
+  "cross_domain_write": false
+}

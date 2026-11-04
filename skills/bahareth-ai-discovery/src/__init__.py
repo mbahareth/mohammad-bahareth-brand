@@ -1,0 +1,1 @@
+"""Bahareth AI Discovery read-only command-line helpers."""

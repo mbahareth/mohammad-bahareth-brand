@@ -1,0 +1,18 @@
+{
+  "host": "mohammadbahareth.sa",
+  "vertical": "saudi",
+  "person": "Mohammad Bahareth",
+  "arabic_name": "محمد باحارث",
+  "role": "Arabic institutional speaking, workshops, podcast and media invitations",
+  "start_paths": [
+    "/",
+    "/about",
+    "/speaking",
+    "/workshops",
+    "/media",
+    "/advisory",
+    "/contact"
+  ],
+  "mutation_policy": "deny_without_approval",
+  "cross_domain_write": false
+}

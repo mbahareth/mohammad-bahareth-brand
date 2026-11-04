@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+reports/
+*.audit.json
+*.observations.json
+.env
+.env.*
+*.log
