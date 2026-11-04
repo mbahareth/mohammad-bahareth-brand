@@ -136,7 +136,11 @@ def validate_profile(path: str) -> dict[str, Any]:
     for route in paths:
         if not isinstance(route, str) or not route.startswith("/") or route.startswith("//") or ".." in route or "?" in route or "#" in route:
             raise ValueError(f"Unsafe profile route: {route!r}")
-    if cfg.get("arabic_person") != "محمد باحارث" or cfg.get("canonical_person") != "Mohammad Bahareth":
+    # v1 GitHub profiles used person/arabic_name; newer profiles use
+    # canonical_person/arabic_person. Accept either without allowing conflicts.
+    en_values = [cfg[k] for k in ("person", "canonical_person") if k in cfg]
+    ar_values = [cfg[k] for k in ("arabic_name", "arabic_person") if k in cfg]
+    if not en_values or any(v != "Mohammad Bahareth" for v in en_values) or not ar_values or any(v != "محمد باحارث" for v in ar_values):
         raise ValueError("Author identity does not match the canonical profile")
     return cfg
 
