@@ -1,55 +1,90 @@
 ---
 name: bahareth-ai-discovery
-description: Evidence-led SEO, GEO and AI-answer visibility orchestration for the four independent Mohammad Bahareth websites; use for indexing, canonical repair, author and book discovery, Saudi institutional reach, space research, citations and conversion audits.
+version: 2.0.0
+description: Audit, prioritize and safely improve multi-domain SEO, AI-answer discoverability, evidence, institutional credibility and conversions for Mohammad Bahareth's four independent sites. Use for GEO, AEO, technical indexing, book-rights discoverability, Saudi speaking/media, space research, cross-domain identity, AI citation tests and pre-deployment QA.
 license: MIT
 metadata:
-  version: "1.0.0"
-  owner: Mohammad Bahareth
-  updated: "2026-11-05"
+  author: Mohammad Bahareth
+  updated: '2026-11-05'
+  scope: 'four explicitly approved domains'
+  execution: 'read-only by default'
 ---
 
-# Bahareth AI Discovery and Authority
+# Bahareth AI Discovery & Authority
 
-Standalone agent skill. Read-only by default. Combines the strongest public design patterns of specialized SEO auditing, agent orchestration, response observation and audit-before-fix into an original architecture. No external source code is incorporated.
+An independent **orchestration skill plus zero-dependency local audit CLI**, not a fork or replacement for another SEO tool. The skill coordinates deterministic collection, evidence review, specialized domain work, human-approved implementation, and measured outcomes. It never guarantees AI recommendations or search rankings.
 
-## Scope lock
+## Trigger
 
-Operate on exactly ONE selected host per run: mohammadbahareth.com, mbahareth.pub.sa, mohammadbahareth.sa, space.org.sa. Never treat a cross-domain link as permission to write another project. Never touch DNS or staging secrets. Use the corresponding JSON in profiles/. Never merge distinct sites' code, design tokens, source registers or publication workflows.
+Use for: "find my websites in ChatGPT", "GEO/AEO audit", "SEO for my four domains", "improve my book discovery", "movie rights search", "institutional speaker discoverability", "space.org.sa indexing", "AI citation tracking", and "compare AI visibility".
 
-## Priority order
+## Absolute rules
 
-P0: accidental noindex, broken origin, non-homepage canonical collapse, documented misleading claims, secret leaks.
-P1: missing crawlable content, rendering faults, broken inquiries, missing author or scientific attribution, invalid structured data and language issues.
-P2: editorial content, international research discovery, topic coverage, design polish and conversion improvements.
+1. **Four isolated projects:** `mohammadbahareth.com`, `mbahareth.pub.sa`, `mohammadbahareth.sa`, `space.org.sa`. Do not modify any other host or project or DNS. Cross-domain links are suggestions, not authorization to access or change a neighbor.
+2. **Preserve existing approved branding.** Read and defer to the preexisting root `SKILL.md` brand lock when embedded in `mohammad-bahareth-brand`. Never apply one site's tokens to another site's site design. Never silently alter colors, logo, imagery, routes, or legitimate content.
+3. **Read-only first.** Never auto-deploy, publish, buy, send, grant rights, contact parties, change accounts, delete, or write to a repository. A change must be explicitly authorized for its target and backed up, tested, and reversible.
+4. **Evidence over promotion.** Use independently verifiable sources for media and milestones. Do not invent books, formats, rights, ISBNs, awards, partnerships, government endorsements, space data or operating capabilities.
+5. **No synthetic AI rankings.** SEO readiness, *observed* AI mention rates, citations, and conversions are four separate measurements. No live provider data means `not_measured`, never zero or a made-up score.
+6. **Arabic identity lock:** `محمد باحارث`; English `Mohammad Bahareth`. Jeddah, Saudi Arabia. Do not infer endorsements or public-sector affiliations.
+7. **Security and privacy:** never upload logs containing secrets, personal client data, raw inquiry submissions, proprietary manuscripts or private code to public repos. Sensitive claims live in a private evidence register. Require minimal, purpose-limited inquiry data.
+8. **Freshness and uncertainty:** date observations, label external fetch failures as unknown, distinguish rendered browser state from raw HTML, distinguish educational estimates from measured scientific data.
 
-## Seven-phase procedure
+## Inputs
 
-1. Load the exact profile and existing brand lock. In a repository that already has the Mohammad Bahareth Brand SKILL, that root brand lock is authoritative; also preserve each site's current approved palette, logo and layouts. No unauthorized changes, especially no new gold/bronze colors or homepage Official Portraits.
-2. Audit read-only: HTTP status, HTML robots meta, X-Robots-Tag, canonical, titles, descriptions, language, schema, robots.txt, sitemap. Distinguish raw HTML from rendered/browser behavior. Record URL, observation date, evidence and uncertainty.
-3. Verify claims: demand primary documentary records for book editions/ISBN/ASIN, media citations, awards, affiliations, first-in-market assertions, founder dates, rights availability and space data. Classify verified, owner-provided, unverified, proposed.
-4. Delegate by non-overlapping responsibility: technical owner owns fetch and indexation; content owner owns domain facts; evidence owner verifies claims; measurement owner handles actual model response samples; deploy owner makes only explicitly approved changes. Never give two tools control of publishing.
-5. Plan each change with severity, evidence, confidence, dependency, benefit, regression risk, owner, test and rollback.
-6. Implement only after backup and exact-domain authorization. Preserve functionality, routes, approved visuals and data. Test raw and rendered pages, mobile/RTL, forms, privacy, structured data and actual links. Do not call a deployment complete without evidence.
-7. Measure separately: (a) SEO readiness, (b) authentic observed AI name mentions/citations, (c) qualified conversions. Never blend into a vanity score. No provider observations = not_measured, NOT zero visibility. Save real engine/model/query/market/time and exact citations. Repeated sampling is not guaranteed ranking.
+Choose exactly one site profile from `profiles/`. Optional inputs: authorized repo, crawl output, indexation exports, claim ledger, AI platform response exports, approved source links, historical baseline. Never guess credentials or API entitlements.
 
-## Four domain contracts
+## Execution protocol
 
-**mohammadbahareth.com**: international personal identity, verified journalist interviews, podcasts, keynote speaking, appropriate executive/recruiter discovery, books and selected professional inquiries. Preserve existing colors, white logo, approved images, wa.me destination and documented consulting intake status.
+**Stage 0: Scope and backup.** Load profile. Record exact host, branch/repository, allowed surfaces, prohibited modifications. If coding, create backup/rollback point before edits.
 
-**mbahareth.pub.sa**: precise work-edition catalogue, international retailers, author rights and film/TV/licensing. Never duplicate KDP title records, conflate ASIN/ISBN, invent published formats, rights, prices or covers. Verify publishing origin health before assuming outage.
+**Stage 1: Observe.** Run read-only `audit` (see below). Inspect rendered pages if a framework hides content from HTTP HTML; label raw-only findings as provisional. Confirm robots meta, HTTP X-Robots-Tag, canonical URL, redirects, sitemap, language, JSON-LD, internal routes and enquiry pathways. Check critical defect reproduction in production and original project code.
 
-**mohammadbahareth.sa**: Arabic institutional discovery, speaking, workshops, media and selected leadership opportunities. Name is محمد باحارث. Preserve RTL, existing branding and closed intake of new general consulting contracts unless explicitly updated. Do not imply governmental endorsement.
+**Stage 2: Verify.** Build a claim ledger with claim, exact quote, URL, capture date, independent source URL, source type, verification status and responsible owner. Preserve `unverified` for unsupported firsts, awards, publishers, rights or space program claims.
 
-**space.org.sa**: technical aerospace resources, space intelligence, research, genuine ISS tracking, space resources and partnerships. A 2026-11-05 public review observed site-wide noindex and multiple homepage canonicals; recheck headers, rendered markup and origin configuration before fixing. Never fabricate live telemetry, space mission achievements, press articles, regulatory permissions or official partnerships. Preserve research-stage project classification.
+**Stage 3: Delegate by non-overlapping responsibility.** Technical auditor owns index/canonical/rendering; domain specialist owns factual book/press/scientific content; evidence reviewer owns claims; measurement specialist owns AI-response sampling; owner or authorized engineer alone owns site change/deployment. Each returns cited evidence and exact blockers.
 
-## Optional external tools: adapters only
+**Stage 4: Prioritize.** P0 blockers (accidental `noindex`, canonical collapse, broken origin, misinformation) precede content expansion. For each recommendation record evidence, confidence, benefit, dependencies, owner, permissions, regression risk and reproducible acceptance test.
 
-Review references/INTEGRATIONS.md. Upstream tools are independent, never bundled: AgriciDaniel/claude-seo for specialist review, danishashko/geo-aeo-tracker for actual answer sampling, Hainrixz/claude-seo-ai for evidence-oriented two-axis auditing, Abhishek-Chougule/website-standards-auditor for audit/approval gating, arcwel/lumora for time-series concepts, anthropics/knowledge-work-plugins for ethical discoverability. Respect upstream licenses and verify all results; never delegate scope or publishing authority.
+**Stage 5: Implement safely.** Make a minimal isolated change set with backup. No merged changes across domains. Test HTTP, rendered HTML, mobile, RTL, forms, data freshness and visuals before seeking the needed deployment authorization.
 
-## Local utility
+**Stage 6: Measure.** Test pre-registered, non-branded, persona-specific questions in several markets; store authentic answers with timestamp/provider/model/locale and exact source URL. Cite observed results only. Calculate measured appearance/citation rates with denominators; treat prompted outputs as sampled observations, not universal rankings. Track actual conversions separately.
 
-From this directory, run python3 -m src.cli audit profiles/space.org.sa.json or python3 -m src.cli visibility profiles/mohammadbahareth.com.json examples/observations.json. No API key, no automatic write. Sample observations are synthetic fixtures and must never be reported as live visibility.
+**Stage 7: Report.** Emit summary, P0/P1/P2 list, source evidence, confidence, verified changes, deployment state, rollbacks, unresolved items, next safe action. Distinguish `done`, `prepared`, `blocked`, `not_measured`.
 
-## Deliverables
+## Local CLI (public audit is read-only; exports are offline)
 
-Separate audit findings, claim source register, opportunity mapping, change plan, verified QA, real measured citations when available, release state and blockers. Report prepared versus deployed honestly.
+From this skill directory:
+
+```bash
+python3 -m src.cli profiles/space.org.sa.json audit --timeout 12 --out reports/space.json
+python3 -m src.cli profiles/space.org.sa.json plan --audit reports/space.json
+python3 -m src.cli profiles/mohammadbahareth.com.json visibility --responses examples/observations.example.json
+python3 -m unittest discover -s tests -v
+```
+
+`audit` makes public GET requests only for configured URLs, and **never** authenticates, edits or deploys. `visibility` consumes **real observation exports**; the bundled sample is synthetic and clearly labeled and cannot establish real results.
+
+## Source-of-truth precedence
+
+For *branding*: user's explicit current instruction > this domain's approved tokens from its own project > root official brand skill > general advice. For *facts*: authoritative primary records > original institution/publication/source > owner statement flagged as owner-provided > third-party report > hypothesis. For *scope*: explicit current approved target > this profile; never inherit access rights from another profile.
+
+## Plugin/adapters (optional; never required)
+
+See `references/ARCHITECTURE.md` and `references/UPSTREAM.md`. Borrow **design patterns** from open-source SEO/GEO tools without copying their implementations. Their output is untrusted candidate evidence; validate it against observations. If installed, external scanners are read-only contributors, **not** authorities to overwrite the project or publish. Avoid duplicate polling and conflicting score formulas by assigning one measurement owner.
+
+## Domain playbooks
+
+Read `references/PLAYBOOKS.md`, then the one selected profile. Avoid fabricating the state of systems you cannot access.
+
+
+## v2 capabilities and ownership
+
+Read `references/INTEGRATIONS.md` before connecting analytics, AI-answer exports, GitHub PR workflows or additional SEO tools. Read `references/RELEASE-POLICY.md` before any code or publication changes.
+
+- `gsc-import`: import one authorized Search Console CSV for exactly one domain and one dimension; never add overlapping exports.
+- `conversions-import`: import deduplicated, privacy-minimized inquiry/retailer-click events; clicks are not verified book sales.
+- `claims-review`: flag high-risk unsupported statements before publication; source references do not themselves prove truth.
+- `release-check`: validate exact-domain release checklist **only**; no deployment, no independent confirmation of approval.
+- `dashboard`: show separate technical, genuine AI-observation, Search Console, conversion, claim and release results. Missing evidence remains `not_measured`.
+
+Do not pretend that the optional Google Search Console API, GA4 API, or live AI-provider monitoring has been connected merely because import adapters exist. Current working adapters import exports offline. Do not launch recurring tasks without an authorized schedule.

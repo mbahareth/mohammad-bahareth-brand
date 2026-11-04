@@ -1,0 +1,8 @@
+{
+  "scope": "space.org.sa",
+  "fixture_only": true,
+  "claims": [
+    {"id": "space-first-firm", "risk": "high", "status": "unverified", "sources": []},
+    {"id": "orbital-tools", "risk": "low", "status": "owner_reported", "sources": []}
+  ]
+}
