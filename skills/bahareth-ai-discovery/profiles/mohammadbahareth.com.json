@@ -1,0 +1,12 @@
+{
+  "host": "mohammadbahareth.com",
+  "name": "Mohammad Bahareth global authority",
+  "canonical_person": "Mohammad Bahareth",
+  "arabic_person": "محمد باحارث",
+  "start_paths": ["/", "/about", "/speaking", "/press", "/press-kit", "/publishing-rights", "/workshops", "/contact"],
+  "vertical": "global_identity",
+  "site_role": "International speaking, journalism, expert authority, books, selected strategic and executive opportunities",
+  "preserve": ["approved colors and white logo", "no Official Portraits section on homepage", "existing approved WhatsApp wa.me destination", "approved photography", "existing valid routes"],
+  "guardrails": ["no fabricated awards or endorsements", "verify current consulting availability", "no auto-deploy", "do not modify other domains"],
+  "intents": ["Saudi keynote speaker for international conferences", "Saudi author available for podcast interviews", "Saudi expert on entrepreneurship and dyslexia", "Saudi business strategy and negotiation adviser", "Saudi author for film and TV rights discovery", "Saudi board and executive strategic advisory candidate"]
+}

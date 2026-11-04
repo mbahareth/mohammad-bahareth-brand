@@ -1,0 +1,39 @@
+name: Bahareth AI Discovery - safe CI
+
+on:
+  pull_request:
+    paths:
+      - 'skills/bahareth-ai-discovery/**'
+      - '.github/workflows/bahareth-ai-discovery-ci.yml'
+  push:
+    branches: ['feature/bahareth-ai-discovery-20261105']
+    paths:
+      - 'skills/bahareth-ai-discovery/**'
+      - '.github/workflows/bahareth-ai-discovery-ci.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  offline-tests:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: skills/bahareth-ai-discovery
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Unit and policy tests
+        run: python -m unittest discover -s tests -v
+      - name: Validate all four domain profiles
+        run: |
+          python -m src.cli profiles/space.org.sa.json validate-config
+          python -m src.cli profiles/mbahareth.pub.sa.json validate-config
+          python -m src.cli profiles/mohammadbahareth.com.json validate-config
+          python -m src.cli profiles/mohammadbahareth.sa.json validate-config
+      - name: Compile source modules
+        run: python -m compileall -q src

@@ -1,0 +1,13 @@
+{
+  "scope": "space.org.sa",
+  "fixture_only": true,
+  "changed_urls": ["https://space.org.sa/tracker"],
+  "backup_ref": "",
+  "rollback_ref": "",
+  "test_report": "",
+  "reviewer": "",
+  "approval_record": "",
+  "release_owner": "",
+  "scope_isolated": true,
+  "claims_reviewed": false
+}

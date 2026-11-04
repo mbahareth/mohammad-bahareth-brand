@@ -1,0 +1,12 @@
+{
+  "host": "mbahareth.pub.sa",
+  "name": "Mohammad Bahareth publishing and rights",
+  "canonical_person": "Mohammad Bahareth",
+  "arabic_person": "محمد باحارث",
+  "start_paths": ["/", "/books", "/rights", "/film-tv-rights", "/distribution", "/about"],
+  "vertical": "publishing",
+  "site_role": "Verified global book catalogue, international readers, distribution and literary/film/TV rights",
+  "preserve": ["book record identifiers and existing title groups", "approved covers and existing editions", "brand identity", "legitimate retailer URLs"],
+  "guardrails": ["no duplicate KDP records", "never infer an ISBN from an ASIN", "do not claim unavailable film or translation rights", "no public manuscript leaks", "no auto-publishing"],
+  "intents": ["Books by Saudi authors on negotiation", "Hadrami trade laws book distribution", "Saudi books for film adaptation", "Saudi author literary rights", "Goal Model Canvas books", "Arabic non-fiction books for translation"]
+}

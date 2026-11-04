@@ -1,0 +1,2 @@
+event_id,occurred_at,landing_url,event_type
+fixture-1,2026-11-04T12:00:00+03:00,https://mbahareth.pub.sa/books/sample,book_retailer_click

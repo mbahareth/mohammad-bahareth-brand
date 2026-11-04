@@ -1,0 +1,12 @@
+{
+  "host": "mohammadbahareth.sa",
+  "name": "محمد باحارث - الظهور المؤسسي السعودي",
+  "canonical_person": "Mohammad Bahareth",
+  "arabic_person": "محمد باحارث",
+  "start_paths": ["/", "/about", "/speaking", "/workshops", "/media", "/podcast", "/advisory", "/contact"],
+  "vertical": "saudi_institutional",
+  "site_role": "Saudi institutional speaking, Arabic media, workshops and suitable professional opportunities",
+  "preserve": ["existing brand identity and colors", "working RTL UI", "wa.me inquiry destination", "general consulting intake closure statement from October 10 2026"],
+  "guardrails": ["never claim government endorsement", "Arabic name is محمد باحارث", "privacy-conscious inquiry forms", "no phone-only routing"],
+  "intents": ["متحدث سعودي عن ريادة الأعمال", "محاضر عن التنوع العصبي", "خبير سعودي في المفاوضات الاستراتيجية", "ضيف بودكاست عن صناعة الأهداف", "مرشح سعودي لأدوار استشارية استراتيجية", "متحدث عن اقتصاد الفضاء السعودي"]
+}
