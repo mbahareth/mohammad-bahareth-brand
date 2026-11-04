@@ -188,7 +188,8 @@ def release_check(profile: dict[str, Any], manifest: dict[str, Any]) -> dict[str
 def combine_dashboard(profile: dict[str, Any], **named_reports: dict[str, Any] | None) -> dict[str, Any]:
     host = profile["host"]
     allowed = {"audit": "public_html_audit", "visibility": None, "search": "search_console_export",
-               "conversions": "conversion_export", "claims": "claim_review", "release": "release_check"}
+               "conversions": "conversion_export", "claims": "claim_review", "release": "release_check",
+               "chatgpt": "chatgpt_search_readiness", "referrals": "chatgpt_referral_export"}
     result: dict[str, Any] = {"kind": "domain_dashboard", "scope": host, "reports": {},
                              "principles": ["independent measurements, no blended vanity score", "exports != live platform API",
                                             "no synthetic visibility claims", "never auto-deploy"]}
@@ -209,7 +210,9 @@ def combine_dashboard(profile: dict[str, Any], **named_reports: dict[str, Any] |
             "search": ("status", "period", "clicks", "impressions", "ctr", "dimension"),
             "conversions": ("status", "sample_events", "counts", "observed_range"),
             "claims": ("status", "total_claims", "publication_blockers"),
-            "release": ("status", "missing")
+            "release": ("status", "missing"),
+            "chatgpt": ("observed_at", "priority", "robots_status", "robots_policy_evaluable", "pages", "limitations"),
+            "referrals": ("status", "input_rows", "attributed_rows", "utm_marked_rows", "chatgpt_referrer_rows", "limitations")
         }[name]
         result["reports"][name] = {k: report[k] for k in keys if k in report}
     return result

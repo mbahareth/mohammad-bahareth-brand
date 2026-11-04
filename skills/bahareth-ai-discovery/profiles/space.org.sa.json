@@ -1,19 +1,12 @@
 {
   "host": "space.org.sa",
+  "name": "Mohammad Bahareth Space Resources",
+  "canonical_person": "Mohammad Bahareth",
+  "arabic_person": "محمد باحارث",
+  "start_paths": ["/", "/about", "/programs", "/tracker", "/press", "/news", "/learn", "/contact"],
   "vertical": "aerospace",
-  "person": "Mohammad Bahareth",
-  "arabic_name": "محمد باحارث",
-  "role": "space engineering, ISS tracking, research, scientific provenance and partners",
-  "start_paths": [
-    "/",
-    "/about",
-    "/programs",
-    "/tracker",
-    "/news",
-    "/press",
-    "/learn",
-    "/contact"
-  ],
-  "mutation_policy": "deny_without_approval",
-  "cross_domain_write": false
+  "site_role": "Saudi space R&D, orbital education, scientific data, research and institutional collaboration",
+  "preserve": ["approved aerospace brand tokens", "functional ISS tracker and map", "existing research-stage program distinctions", "original sourced scientific material"],
+  "guardrails": ["verify 2026-11-05 observed noindex and canonical issues live", "no false first-company or partnership assertions", "no scientific data fabrication", "preserve simulated versus measured distinction", "no launch or spaceflight sales without authorization"],
+  "intents": ["Saudi private space research companies", "Saudi space mining research", "ISS tracking tools with source attribution", "space debris research Saudi Arabia", "orbital servicing research collaboration", "Saudi aerospace researcher or speaker"]
 }

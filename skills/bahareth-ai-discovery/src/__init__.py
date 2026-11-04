@@ -1,1 +1,1 @@
-"""Bahareth AI Discovery read-only command-line helpers."""
+"""Independent Bahareth AI Discovery tools (stdlib-only)."""

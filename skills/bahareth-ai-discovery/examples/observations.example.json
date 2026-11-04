@@ -1,0 +1,12 @@
+{
+  "fixture_only": true,
+  "description": "Synthetic input format example; NOT empirical AI visibility evidence",
+  "observations": [
+    {
+      "id": "synthetic-001", "engine": "example-model", "model": "example", "captured_at": "2026-11-05T00:00:00+03:00", "query": "Find a Saudi keynote speaker", "locale": "en-SA", "response": "Mohammad Bahareth speaks about strategy.", "citations": ["https://mohammadbahareth.com/speaking"]
+    },
+    {
+      "id": "synthetic-002", "engine": "example-model", "model": "example", "captured_at": "2026-11-05T00:01:00+03:00", "query": "Find a Saudi podcast guest", "locale": "en-SA", "response": "Consider independent subject-matter experts.", "citations": []
+    }
+  ]
+}

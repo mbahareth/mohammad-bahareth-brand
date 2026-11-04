@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.1.0 - 2026-11-05
+- Added ChatGPT Search-specific readiness auditor: OAI-SearchBot robots.txt matching, independent GPTBot policy, noindex and canonical P0 diagnosis, static HTML extractability signals.
+- Added offline ChatGPT referral parser based on `utm_source=chatgpt.com` and chatgpt.com referrer; no claims about sales or universal attribution.
+- Added evidence-first domain-specific ChatGPT content briefs and dedicated official-docs-based playbook.
+- Extended the dashboard with independent ChatGPT readiness and referral fields.
+- Added deterministic regression tests (no network, no provider credentials).
+- No live site, DNS, payment, marketing message or crawler permission changed.
+
+
 ## 2.0.0 — 2026-11-05
 
 - Added safe, offline Google Search Console CSV import with domain/period validation and correct weighted metrics.

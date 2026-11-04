@@ -1,4 +1,4 @@
-# Bahareth AI Discovery & Authority (v1.0.0)
+# Bahareth AI Discovery & Authority (v2.1.0)
 
 A portable Agent Skill and working, zero-dependency Python audit tool for four independently managed websites. It targets truthful discoverability in search and AI-generated answers, evidence-backed expertise, library/rights information, Saudi institutional opportunities and scientifically credible aerospace resources.
 
@@ -78,3 +78,16 @@ python3 -m unittest discover -s tests -v
 ```
 
 The `dashboard` subcommand never fills gaps with estimates. Real AI visibility requires independently captured provider answers; technical SEO alone does not prove that an AI assistant recommends the site. See [integration architecture](references/INTEGRATIONS.md) and [release policy](references/RELEASE-POLICY.md).
+
+## v2.1: ChatGPT Search-specific diagnostics
+
+The new `chatgpt-audit` models OAI-SearchBot robots.txt access independently of GPTBot, flags accidental noindex and canonical collapse, checks static answer readability, and explains what still needs actual server/CDN evidence. It does not impersonate OpenAI.
+
+```bash
+python3 -m src.cli profiles/space.org.sa.json chatgpt-audit --out reports/space-chatgpt.json
+python3 -m src.cli profiles/mohammadbahareth.com.json chatgpt-briefs --out reports/answer-briefs.json
+python3 -m src.cli profiles/mbahareth.pub.sa.json chatgpt-referrals --csv examples/chatgpt-referrals.example.csv
+python3 -m unittest discover -s tests -v
+```
+
+ChatGPT Search UTM tracking (`utm_source=chatgpt.com`) is separate from observed AI citation frequency; never treat attributed events as paid sales. See [OpenAI-specific technical playbook](references/CHATGPT-SEARCH.md).

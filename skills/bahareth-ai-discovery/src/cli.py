@@ -299,7 +299,17 @@ def main(argv: list[str] | None = None) -> int:
     dp = cmds.add_parser("dashboard", help="Combine independent pre-generated reports")
     for name in ("audit", "visibility", "search", "conversions", "claims", "release"):
         dp.add_argument("--" + name)
+    dp.add_argument("--chatgpt")
+    dp.add_argument("--referrals")
     dp.add_argument("--out")
+    cg = cmds.add_parser("chatgpt-audit", help="Read-only OAI-SearchBot robots, noindex, canonical, static content check")
+    cg.add_argument("--timeout", type=float, default=12.0)
+    cg.add_argument("--out")
+    br = cmds.add_parser("chatgpt-briefs", help="Create evidence-first ChatGPT Search content proposals; does not publish")
+    br.add_argument("--out")
+    cr = cmds.add_parser("chatgpt-referrals", help="Analyze offline ChatGPT referral export")
+    cr.add_argument("--csv", required=True)
+    cr.add_argument("--out")
     args = parser.parse_args(argv)
     try:
         profile = validate_profile(args.profile)
@@ -322,9 +332,20 @@ def main(argv: list[str] | None = None) -> int:
             data = review_claims(profile, json.loads(Path(args.register).read_text(encoding="utf-8")))
         elif args.command == "release-check":
             data = release_check(profile, json.loads(Path(args.manifest).read_text(encoding="utf-8")))
+        elif args.command == "chatgpt-audit":
+            if args.timeout <= 0 or args.timeout > 60:
+                raise ValueError("Timeout must be between 0 and 60 seconds")
+            from .chatgpt_search import chatgpt_audit
+            data = chatgpt_audit(profile, args.timeout)
+        elif args.command == "chatgpt-briefs":
+            from .chatgpt_search import content_brief
+            data = content_brief(profile)
+        elif args.command == "chatgpt-referrals":
+            from .chatgpt_search import import_chatgpt_referrals
+            data = import_chatgpt_referrals(profile, args.csv)
         elif args.command == "dashboard":
             reports = {name: json.loads(Path(getattr(args, name)).read_text(encoding="utf-8")) if getattr(args, name) else None
-                       for name in ("audit", "visibility", "search", "conversions", "claims", "release")}
+                       for name in ("audit", "visibility", "search", "conversions", "claims", "release", "chatgpt", "referrals")}
             data = combine_dashboard(profile, **reports)
         else:
             raise ValueError("Unknown command")

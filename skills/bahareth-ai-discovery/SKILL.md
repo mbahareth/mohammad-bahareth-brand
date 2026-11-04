@@ -1,6 +1,6 @@
 ---
 name: bahareth-ai-discovery
-version: 2.0.0
+version: 2.1.0
 description: Audit, prioritize and safely improve multi-domain SEO, AI-answer discoverability, evidence, institutional credibility and conversions for Mohammad Bahareth's four independent sites. Use for GEO, AEO, technical indexing, book-rights discoverability, Saudi speaking/media, space research, cross-domain identity, AI citation tests and pre-deployment QA.
 license: MIT
 metadata:
@@ -88,3 +88,11 @@ Read `references/INTEGRATIONS.md` before connecting analytics, AI-answer exports
 - `dashboard`: show separate technical, genuine AI-observation, Search Console, conversion, claim and release results. Missing evidence remains `not_measured`.
 
 Do not pretend that the optional Google Search Console API, GA4 API, or live AI-provider monitoring has been connected merely because import adapters exist. Current working adapters import exports offline. Do not launch recurring tasks without an authorized schedule.
+
+## ChatGPT Search specialization (v2.1)
+
+Read [references/CHATGPT-SEARCH.md](references/CHATGPT-SEARCH.md) for OpenAI's first-party crawler and attribution guidance. Prefer **P0 public indexability and genuine OAI-SearchBot access** over speculative ranking hacks. OpenAI's SearchBot and GPTBot have independent policies; preserve site owners' training opt-out preferences.
+
+Commands: `chatgpt-audit` (read-only OAI-SearchBot/robots/noindex/canonical/static answer-content diagnosis); `chatgpt-briefs` (evidence-first domain-scoped content proposals); `chatgpt-referrals` (offline UTM/referrer import). `dashboard` now accepts `--chatgpt` and `--referrals`.
+
+A successful read-only request is **not** proof that OpenAI's crawler can pass a CDN/WAF, and the tool never claims an OpenAI endorsement or a search ranking. Keep documented original HTTP observations separate from local simulated tests.
